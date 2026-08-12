@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --sunburn-dark: #152935;
+    --sunburn-steel: #698ea2;
+    --sunburn-peach: #e4a576;
+    --sunburn-mint: #ccd5d2;
+    --sunburn-sand: #f1e5d6;
+    --sunburn-bg: #f7f4ef;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--sunburn-bg);
+    color: #152935;
+  }
+}
+
+/* Custom Utilities for Sunburn Palette */
+.bg-sunburn-dark {
+  background-color: #152935;
+}
+
+.text-sunburn-dark {
+  color: #152935;
+}
+
+.bg-sunburn-steel {
+  background-color: #698ea2;
+}
+
+.text-sunburn-steel {
+  color: #698ea2;
+}
+
+.bg-sunburn-peach {
+  background-color: #e4a576;
+}
+
+.text-sunburn-peach {
+  color: #e4a576;
+}
+
+.bg-sunburn-mint {
+  background-color: #ccd5d2;
+}
+
+.bg-sunburn-sand {
+  background-color: #f1e5d6;
+}
+
+.border-sunburn-mint {
+  border-color: #ccd5d2;
+}
+
+.border-sunburn-sand {
+  border-color: #e6ded3;
+}
+
+/* Shadows & Glassmorphism */
+.shadow-sunburn {
+  box-shadow: 0 16px 40px rgba(21, 41, 53, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.shadow-card {
+  box-shadow: 0 8px 24px rgba(21, 41, 53, 0.05);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7f4ef;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccd5d2;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #698ea2;
+}
+
+/* Custom Dropdown Arrow Styling for All Select Elements */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23152935' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.85rem center;
+  background-size: 0.85em 0.85em;
+  padding-right: 2.25rem !important;
+}
+
+/* White Dropdown Arrow for Dark Select Inputs */
+select.text-white,
+select[class*="text-white"] {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+/* Keyframe Animations & Micro-Interactions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-pop-in {
+  animation: popIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Card Hover Lift Effect */
+.hover-lift {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 30px -10px rgba(21, 41, 53, 0.12);
+}

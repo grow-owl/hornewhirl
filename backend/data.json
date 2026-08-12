@@ -1,0 +1,31 @@
+{
+  "owners": [
+    {
+      "id": 1786460963997,
+      "name": "PgWala",
+      "email": "modi@56inch.com",
+      "phone": "9876543210",
+      "password": "abc123@@@",
+      "propertyId": 1786460963996
+    }
+  ],
+  "properties": [
+    {
+      "id": 1786460963996,
+      "name": "PgWala's PG",
+      "city": "Main City",
+      "locality": "Locality",
+      "type": "Co-Living PG",
+      "totalBeds": 0,
+      "monthlyRentPerBed": 0,
+      "ownerName": "PgWala",
+      "phone": "9876543210",
+      "image": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&q=80&w=800"
+    }
+  ],
+  "rooms": [],
+  "students": [],
+  "invoices": [],
+  "expenses": [],
+  "complaints": []
+}
