@@ -4,8 +4,8 @@ import { useApp } from "../context/AppContext";
 
 function SignInModal({ show, onClose, onSuccess, onOpenSecretRegister }) {
   const { loginOwner } = useApp();
-  const [credential, setCredential] = useState("owner@homewhirl.in");
-  const [password, setPassword] = useState("owner123");
+  const [credential, setCredential] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState(null);
 
@@ -59,10 +59,10 @@ function SignInModal({ show, onClose, onSuccess, onOpenSecretRegister }) {
             <input
               type="text"
               required
-              placeholder="owner@homewhirl.in or +91 98480 12345"
+              placeholder="Enter your email address or phone number"
               value={credential}
               onChange={(e) => setCredential(e.target.value)}
-              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2]"
+              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-xs text-[#152935] focus:outline-none focus:border-[#698ea2]"
             />
           </div>
 
@@ -71,10 +71,10 @@ function SignInModal({ show, onClose, onSuccess, onOpenSecretRegister }) {
             <input
               type="password"
               required
-              placeholder="••••••••"
+              placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2]"
+              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-xs text-[#152935] focus:outline-none focus:border-[#698ea2]"
             />
           </div>
 
