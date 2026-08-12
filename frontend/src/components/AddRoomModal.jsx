@@ -33,23 +33,23 @@ function AddRoomModal() {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#152935]/75 backdrop-blur-sm overflow-y-auto">
-      <div className="relative w-full max-w-md bg-white rounded-3xl shadow-sunburn p-6 sm:p-8 text-[#152935] border border-[#ccd5d2] animate-pop-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0b171e]/75 backdrop-blur-sm overflow-y-auto">
+      <div className="relative w-full max-w-md bg-white rounded-3xl shadow-sunburn p-6 sm:p-8 text-[#0b171e] border border-[#ccd5d2] animate-pop-in">
         
         {/* Close Button */}
         <button
           onClick={() => setShowAddRoomModal(false)}
-          className="absolute top-5 right-5 bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#152935] p-2 rounded-full transition cursor-pointer"
+          className="absolute top-5 right-5 bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#0b171e] p-2 rounded-full transition cursor-pointer"
         >
           <FaTimes className="w-4 h-4" />
         </button>
 
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-10 h-10 rounded-2xl bg-[#152935] text-[#e4a576] flex items-center justify-center font-bold shadow-sm">
+          <div className="w-10 h-10 rounded-2xl bg-[#0b171e] text-[#e4a576] flex items-center justify-center font-bold shadow-sm">
             <FaBed className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-[#152935]">Configure Room & Beds</h3>
+            <h3 className="text-xl font-bold text-[#0b171e]">Configure Room & Beds</h3>
             <p className="text-xs text-[#698ea2]">{activeProperty.name}</p>
           </div>
         </div>
@@ -60,7 +60,7 @@ function AddRoomModal() {
             <select
               value={formData.floor}
               onChange={(e) => setFormData({ ...formData, floor: e.target.value })}
-              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2] cursor-pointer"
+              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2] cursor-pointer"
             >
               <option value="Ground Floor">Ground Floor</option>
               <option value="Floor 1">Floor 1 (1st Floor)</option>
@@ -80,7 +80,7 @@ function AddRoomModal() {
                 placeholder="e.g. Mezzanine Floor / Penthouse"
                 value={formData.customFloor}
                 onChange={(e) => setFormData({ ...formData, customFloor: e.target.value })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2]"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
               />
             </div>
           )}
@@ -94,7 +94,7 @@ function AddRoomModal() {
                 placeholder="e.g. 104"
                 value={formData.roomNo}
                 onChange={(e) => setFormData({ ...formData, roomNo: e.target.value })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2]"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
               />
             </div>
 
@@ -103,7 +103,7 @@ function AddRoomModal() {
               <select
                 value={formData.bedCount}
                 onChange={(e) => setFormData({ ...formData, bedCount: parseInt(e.target.value) })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2] cursor-pointer"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2] cursor-pointer"
               >
                 <option value={1}>1 Bed (Single Room)</option>
                 <option value={2}>2 Beds (Double Sharing)</option>
@@ -121,7 +121,7 @@ function AddRoomModal() {
               <select
                 value={formData.sharingType}
                 onChange={(e) => setFormData({ ...formData, sharingType: e.target.value })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-xs text-[#152935] focus:outline-none focus:border-[#698ea2] cursor-pointer"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-xs text-[#0b171e] focus:outline-none focus:border-[#698ea2] cursor-pointer"
               >
                 <option value="Single Private">Single Private</option>
                 <option value="Double Sharing">Double Sharing</option>
@@ -135,7 +135,7 @@ function AddRoomModal() {
               <select
                 value={formData.acType}
                 onChange={(e) => setFormData({ ...formData, acType: e.target.value })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-xs text-[#152935] focus:outline-none focus:border-[#698ea2] cursor-pointer"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-xs text-[#0b171e] focus:outline-none focus:border-[#698ea2] cursor-pointer"
               >
                 <option value="AC">AC Room</option>
                 <option value="NON-AC">NON-AC Room</option>
@@ -149,7 +149,7 @@ function AddRoomModal() {
                 required
                 value={formData.rent}
                 onChange={(e) => setFormData({ ...formData, rent: parseInt(e.target.value) || 0 })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2]"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
               />
             </div>
           </div>
@@ -157,7 +157,7 @@ function AddRoomModal() {
           <div className="pt-2">
             <button
               type="submit"
-              className="w-full bg-[#152935] hover:bg-[#152935]/90 text-white font-bold py-3.5 px-6 rounded-2xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer text-sm"
+              className="w-full bg-[#0b171e] hover:bg-[#0b171e]/90 text-white font-bold py-3.5 px-6 rounded-2xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer text-sm"
             >
               <FaCheckCircle className="w-4 h-4 text-[#e4a576]" />
               <span>Add Room & Generate Bed Slots</span>

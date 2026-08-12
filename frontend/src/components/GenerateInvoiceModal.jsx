@@ -42,13 +42,13 @@ function GenerateInvoiceModal() {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#152935]/70 backdrop-blur-sm overflow-y-auto">
-      <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-sunburn p-6 sm:p-8 text-[#152935] border border-[#ccd5d2] animate-pop-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0b171e]/70 backdrop-blur-sm overflow-y-auto">
+      <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-sunburn p-6 sm:p-8 text-[#0b171e] border border-[#ccd5d2] animate-pop-in">
         
         {/* Close Button */}
         <button
           onClick={() => setShowGenerateBillModal(false)}
-          className="absolute top-5 right-5 bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#152935] p-2 rounded-full transition"
+          className="absolute top-5 right-5 bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#0b171e] p-2 rounded-full transition"
         >
           <FaTimes className="w-4 h-4" />
         </button>
@@ -58,7 +58,7 @@ function GenerateInvoiceModal() {
             <FaFileInvoiceDollar className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-[#152935]">Automated Bill & Rent Invoice Generator</h3>
+            <h3 className="text-xl font-bold text-[#0b171e]">Automated Bill & Rent Invoice Generator</h3>
             <p className="text-xs text-[#698ea2]">Rent + Utility / Electricity Charges Calculation</p>
           </div>
         </div>
@@ -69,7 +69,7 @@ function GenerateInvoiceModal() {
             <select
               value={formData.studentId}
               onChange={handleStudentChange}
-              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2] cursor-pointer"
+              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2] cursor-pointer"
             >
               {activeStudents.map((s) => (
                 <option key={s.id} value={s.id}>
@@ -87,7 +87,7 @@ function GenerateInvoiceModal() {
                 required
                 value={formData.month}
                 onChange={(e) => setFormData({ ...formData, month: e.target.value })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2]"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
               />
             </div>
 
@@ -98,13 +98,13 @@ function GenerateInvoiceModal() {
                 required
                 value={formData.dueDate}
                 onChange={(e) => setFormData({ ...formData, dueDate: e.target.value })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2]"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
               />
             </div>
           </div>
 
           <div className="bg-[#f1e5d6]/50 p-4 rounded-2xl border border-[#ccd5d2] space-y-3">
-            <h4 className="text-xs font-extrabold uppercase text-[#152935] tracking-wider flex items-center gap-1.5">
+            <h4 className="text-xs font-extrabold uppercase text-[#0b171e] tracking-wider flex items-center gap-1.5">
               <FaCalculator className="text-[#e4a576]" /> Breakdown Charges
             </h4>
 
@@ -116,7 +116,7 @@ function GenerateInvoiceModal() {
                   required
                   value={formData.rentAmount}
                   onChange={(e) => setFormData({ ...formData, rentAmount: parseInt(e.target.value) || 0 })}
-                  className="w-full bg-white border border-[#ccd5d2] rounded-xl px-3 py-2 text-xs text-[#152935]"
+                  className="w-full bg-white border border-[#ccd5d2] rounded-xl px-3 py-2 text-xs text-[#0b171e]"
                 />
               </div>
 
@@ -128,7 +128,7 @@ function GenerateInvoiceModal() {
                   type="number"
                   value={formData.electricityAmount}
                   onChange={(e) => setFormData({ ...formData, electricityAmount: parseInt(e.target.value) || 0 })}
-                  className="w-full bg-white border border-[#ccd5d2] rounded-xl px-3 py-2 text-xs text-[#152935]"
+                  className="w-full bg-white border border-[#ccd5d2] rounded-xl px-3 py-2 text-xs text-[#0b171e]"
                 />
               </div>
 
@@ -140,7 +140,7 @@ function GenerateInvoiceModal() {
                   type="number"
                   value={formData.waterAmount}
                   onChange={(e) => setFormData({ ...formData, waterAmount: parseInt(e.target.value) || 0 })}
-                  className="w-full bg-white border border-[#ccd5d2] rounded-xl px-3 py-2 text-xs text-[#152935]"
+                  className="w-full bg-white border border-[#ccd5d2] rounded-xl px-3 py-2 text-xs text-[#0b171e]"
                 />
               </div>
             </div>
@@ -154,7 +154,7 @@ function GenerateInvoiceModal() {
           <div className="pt-2">
             <button
               type="submit"
-              className="w-full bg-[#152935] hover:bg-[#152935]/90 text-white font-bold py-3.5 px-6 rounded-2xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer text-sm"
+              className="w-full bg-[#0b171e] hover:bg-[#0b171e]/90 text-white font-bold py-3.5 px-6 rounded-2xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer text-sm"
             >
               <FaCheckCircle className="w-4 h-4 text-[#e4a576]" />
               <span>Generate & Issue Invoice</span>

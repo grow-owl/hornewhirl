@@ -24,23 +24,23 @@ function RegisterPGModal() {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#152935]/75 backdrop-blur-sm overflow-y-auto">
-      <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-sunburn p-6 sm:p-8 text-[#152935] border border-[#ccd5d2] animate-pop-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0b171e]/75 backdrop-blur-sm overflow-y-auto">
+      <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-sunburn p-6 sm:p-8 text-[#0b171e] border border-[#ccd5d2] animate-pop-in">
         
         {/* Close Button */}
         <button
           onClick={() => setShowRegisterPGModal(false)}
-          className="absolute top-5 right-5 bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#152935] p-2 rounded-full transition cursor-pointer"
+          className="absolute top-5 right-5 bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#0b171e] p-2 rounded-full transition cursor-pointer"
         >
           <FaTimes className="w-4 h-4" />
         </button>
 
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-10 h-10 rounded-2xl bg-[#152935] text-[#e4a576] flex items-center justify-center font-bold shadow-sm">
+          <div className="w-10 h-10 rounded-2xl bg-[#0b171e] text-[#e4a576] flex items-center justify-center font-bold shadow-sm">
             <FaBuilding className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-[#152935]">Register New PG / Hostel Property</h3>
+            <h3 className="text-xl font-bold text-[#0b171e]">Register New PG / Hostel Property</h3>
             <p className="text-xs text-[#698ea2]">Set up multi-floor rooms & bed management</p>
           </div>
         </div>
@@ -54,7 +54,7 @@ function RegisterPGModal() {
               placeholder="e.g. Mens luxury pg"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2]"
+              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
             />
           </div>
 
@@ -67,7 +67,7 @@ function RegisterPGModal() {
                 placeholder="Vijayawada"
                 value={formData.city}
                 onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2]"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
               />
             </div>
 
@@ -79,7 +79,7 @@ function RegisterPGModal() {
                 placeholder="Andhra Pradesh"
                 value={formData.locality}
                 onChange={(e) => setFormData({ ...formData, locality: e.target.value })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2]"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
               />
             </div>
           </div>
@@ -90,7 +90,7 @@ function RegisterPGModal() {
               <select
                 value={formData.type}
                 onChange={(e) => setFormData({ ...formData, type: e.target.value })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-xs text-[#152935] focus:outline-none focus:border-[#698ea2] cursor-pointer"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-xs text-[#0b171e] focus:outline-none focus:border-[#698ea2] cursor-pointer"
               >
                 <option value="Co-Living PG">Co-Living PG</option>
                 <option value="Boys PG">Boys PG</option>
@@ -106,7 +106,7 @@ function RegisterPGModal() {
                 required
                 value={formData.totalBeds}
                 onChange={(e) => setFormData({ ...formData, totalBeds: parseInt(e.target.value) || 10 })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2]"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
               />
             </div>
 
@@ -117,7 +117,7 @@ function RegisterPGModal() {
                 required
                 value={formData.monthlyRentPerBed}
                 onChange={(e) => setFormData({ ...formData, monthlyRentPerBed: parseInt(e.target.value) || 0 })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2]"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
               />
             </div>
           </div>
@@ -125,7 +125,7 @@ function RegisterPGModal() {
           <div className="pt-2">
             <button
               type="submit"
-              className="w-full bg-[#152935] hover:bg-[#152935]/90 text-white font-bold py-3.5 px-6 rounded-2xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer text-sm"
+              className="w-full bg-[#0b171e] hover:bg-[#0b171e]/90 text-white font-bold py-3.5 px-6 rounded-2xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer text-sm"
             >
               <FaCheck className="w-4 h-4 text-[#e4a576]" />
               <span>Create Property Workspace</span>

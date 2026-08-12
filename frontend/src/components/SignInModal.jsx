@@ -26,23 +26,23 @@ function SignInModal({ show, onClose, onSuccess, onOpenSecretRegister }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#152935]/75 backdrop-blur-sm overflow-y-auto">
-      <div className="relative w-full max-w-md bg-white rounded-3xl shadow-sunburn p-6 sm:p-8 text-[#152935] border border-[#ccd5d2] animate-pop-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0b171e]/75 backdrop-blur-sm overflow-y-auto">
+      <div className="relative w-full max-w-md bg-white rounded-3xl shadow-sunburn p-6 sm:p-8 text-[#0b171e] border border-[#ccd5d2] animate-pop-in">
 
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#152935] p-2 rounded-full transition cursor-pointer"
+          className="absolute top-5 right-5 bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#0b171e] p-2 rounded-full transition cursor-pointer"
         >
           <FaTimes className="w-4 h-4" />
         </button>
 
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-10 h-10 rounded-2xl bg-[#152935] text-[#e4a576] flex items-center justify-center font-bold shadow-sm">
+          <div className="w-10 h-10 rounded-2xl bg-[#0b171e] text-[#e4a576] flex items-center justify-center font-bold shadow-sm">
             <FaLock className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-[#152935]">PG Owner Sign In</h3>
+            <h3 className="text-xl font-bold text-[#0b171e]">PG Owner Sign In</h3>
             <p className="text-xs text-[#698ea2]">Enter your credentials to access your dashboard</p>
           </div>
         </div>
@@ -62,7 +62,7 @@ function SignInModal({ show, onClose, onSuccess, onOpenSecretRegister }) {
               placeholder="Enter your email address or phone number"
               value={credential}
               onChange={(e) => setCredential(e.target.value)}
-              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-xs text-[#152935] focus:outline-none focus:border-[#698ea2]"
+              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-xs text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
             />
           </div>
 
@@ -74,7 +74,7 @@ function SignInModal({ show, onClose, onSuccess, onOpenSecretRegister }) {
               placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-xs text-[#152935] focus:outline-none focus:border-[#698ea2]"
+              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-xs text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
             />
           </div>
 
@@ -82,7 +82,7 @@ function SignInModal({ show, onClose, onSuccess, onOpenSecretRegister }) {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#152935] hover:bg-[#152935]/90 text-white font-bold py-3.5 px-6 rounded-2xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer text-sm"
+              className="w-full bg-[#0b171e] hover:bg-[#0b171e]/90 text-white font-bold py-3.5 px-6 rounded-2xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer text-sm"
             >
               <FaCheckCircle className="w-4 h-4 text-[#e4a576]" />
               <span>{loading ? "Authenticating..." : "Sign In to Owner Dashboard"}</span>

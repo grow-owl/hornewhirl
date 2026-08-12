@@ -28,7 +28,7 @@ function Navbar({ viewMode, setViewMode, onOpenSignIn }) {
           {isAuthenticated && (
             <button
               onClick={toggleSidebar}
-              className="p-2.5 rounded-xl bg-[#152935] hover:bg-[#152935]/90 text-white shadow-md transition flex items-center gap-2 cursor-pointer"
+              className="p-2.5 rounded-xl bg-[#0b171e] hover:bg-[#0b171e]/90 text-white shadow-md transition flex items-center gap-2 cursor-pointer"
               title="Toggle Navigation Menu"
             >
               <FaBars className="w-4 h-4 text-[#e4a576]" />
@@ -38,11 +38,11 @@ function Navbar({ viewMode, setViewMode, onOpenSignIn }) {
 
           {/* Brand Logo */}
           <button onClick={() => setViewMode("landing")} className="flex items-center gap-2.5 cursor-pointer text-left">
-            <div className="w-9 h-9 rounded-xl bg-[#152935] flex items-center justify-center text-[#e4a576] font-black text-lg shadow-sm">
+            <div className="w-9 h-9 rounded-xl bg-[#0b171e] flex items-center justify-center text-[#e4a576] font-black text-lg shadow-sm">
               <FaHome className="w-4 h-4 text-[#e4a576]" />
             </div>
             <div>
-              <span className="text-xl font-extrabold tracking-tight text-[#152935] block leading-tight">
+              <span className="text-xl font-extrabold tracking-tight text-[#0b171e] block leading-tight">
                 Home<span className="text-[#698ea2]">Whirl</span>
               </span>
             </div>
@@ -52,9 +52,9 @@ function Navbar({ viewMode, setViewMode, onOpenSignIn }) {
         {/* Navigation Links (Landing Mode Desktop) */}
         {!isDashboardView && (
           <nav className="hidden md:flex items-center gap-6 text-xs font-bold text-[#698ea2]">
-            <a href="#features" className="hover:text-[#152935] transition">Features</a>
-            <a href="#how-it-works" className="hover:text-[#152935] transition">How It Works</a>
-            <a href="#contact-us" className="hover:text-[#152935] transition">Contact Us</a>
+            <a href="#features" className="hover:text-[#0b171e] transition">Features</a>
+            <a href="#how-it-works" className="hover:text-[#0b171e] transition">How It Works</a>
+            <a href="#contact-us" className="hover:text-[#0b171e] transition">Contact Us</a>
           </nav>
         )}
 
@@ -65,7 +65,7 @@ function Navbar({ viewMode, setViewMode, onOpenSignIn }) {
               {viewMode === "landing" ? (
                 <button
                   onClick={() => setViewMode("dashboard")}
-                  className="bg-[#152935] text-white text-xs font-extrabold px-4 py-2 rounded-xl shadow-md cursor-pointer"
+                  className="bg-[#0b171e] text-white text-xs font-extrabold px-4 py-2 rounded-xl shadow-md cursor-pointer"
                 >
                   Go to Dashboard
                 </button>
@@ -73,14 +73,14 @@ function Navbar({ viewMode, setViewMode, onOpenSignIn }) {
                 <>
                   <button
                     onClick={() => setShowAddRoomModal(true)}
-                    className="bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#152935] text-xs font-extrabold px-3 py-2 rounded-xl transition flex items-center gap-1.5 cursor-pointer"
+                    className="bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#0b171e] text-xs font-extrabold px-3 py-2 rounded-xl transition flex items-center gap-1.5 cursor-pointer"
                   >
                     <FaBed className="w-3.5 h-3.5 text-[#698ea2]" />
                     <span>+ Rooms</span>
                   </button>
                   <button
                     onClick={() => setShowAllocateBedModal(true)}
-                    className="bg-[#152935] hover:bg-[#152935]/90 text-white text-xs font-bold px-3.5 py-2 rounded-xl transition shadow-md flex items-center gap-1.5 cursor-pointer"
+                    className="bg-[#0b171e] hover:bg-[#0b171e]/90 text-white text-xs font-bold px-3.5 py-2 rounded-xl transition shadow-md flex items-center gap-1.5 cursor-pointer"
                   >
                     <FaPlus className="w-3 h-3 text-[#e4a576]" />
                     <span>Add Tenant</span>
@@ -103,7 +103,7 @@ function Navbar({ viewMode, setViewMode, onOpenSignIn }) {
           ) : (
             <button
               onClick={onOpenSignIn}
-              className="bg-[#152935] hover:bg-[#152935]/90 text-white text-xs font-bold px-4.5 py-2.5 rounded-xl transition shadow-md flex items-center gap-1.5 cursor-pointer"
+              className="bg-[#0b171e] hover:bg-[#0b171e]/90 text-white text-xs font-bold px-4.5 py-2.5 rounded-xl transition shadow-md flex items-center gap-1.5 cursor-pointer"
             >
               <FaLock className="w-3 h-3 text-[#e4a576]" />
               <span>Sign In</span>
@@ -116,7 +116,7 @@ function Navbar({ viewMode, setViewMode, onOpenSignIn }) {
           {!isAuthenticated ? (
             <button
               onClick={onOpenSignIn}
-              className="bg-[#152935] text-white text-xs font-bold px-3 py-2 rounded-xl shadow-md flex items-center gap-1 cursor-pointer"
+              className="bg-[#0b171e] text-white text-xs font-bold px-3 py-2 rounded-xl shadow-md flex items-center gap-1 cursor-pointer"
             >
               <FaLock className="w-3 h-3 text-[#e4a576]" />
               <span>Sign In</span>
@@ -124,7 +124,7 @@ function Navbar({ viewMode, setViewMode, onOpenSignIn }) {
           ) : (
             <button
               onClick={() => setShowAllocateBedModal(true)}
-              className="bg-[#152935] text-white text-xs font-bold px-3 py-2 rounded-xl shadow-md flex items-center gap-1 cursor-pointer"
+              className="bg-[#0b171e] text-white text-xs font-bold px-3 py-2 rounded-xl shadow-md flex items-center gap-1 cursor-pointer"
             >
               <FaPlus className="w-3 h-3 text-[#e4a576]" />
               <span>+ Tenant</span>

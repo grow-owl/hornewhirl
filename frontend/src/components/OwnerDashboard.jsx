@@ -129,20 +129,20 @@ function OwnerDashboard() {
 
   if (properties.length === 0) {
     return (
-      <div className="min-h-screen bg-[#f7f4ef] text-[#152935] py-16 px-4 flex items-center justify-center">
+      <div className="min-h-screen bg-[#f7f4ef] text-[#0b171e] py-16 px-4 flex items-center justify-center">
         <div className="bg-white p-8 sm:p-12 rounded-3xl shadow-sunburn border border-[#ccd5d2] max-w-lg text-center space-y-6">
-          <div className="w-16 h-16 rounded-2xl bg-[#152935] text-[#e4a576] flex items-center justify-center text-2xl mx-auto font-black shadow-md">
+          <div className="w-16 h-16 rounded-2xl bg-[#0b171e] text-[#e4a576] flex items-center justify-center text-2xl mx-auto font-black shadow-md">
             <FaBuilding />
           </div>
           <div>
-            <h2 className="text-2xl font-black text-[#152935]">Welcome to HomeWhirl SaaS</h2>
+            <h2 className="text-2xl font-black text-[#0b171e]">Welcome to HomeWhirl SaaS</h2>
             <p className="text-xs text-[#698ea2] mt-2 leading-relaxed font-semibold">
               No PG or Hostel property registered yet. Click below to register your first property and start customizing floors, rooms, beds & onboarding tenants!
             </p>
           </div>
           <button
             onClick={() => setShowRegisterPGModal(true)}
-            className="w-full bg-[#152935] hover:bg-[#152935]/90 text-white font-bold py-3.5 px-6 rounded-2xl transition shadow-md flex items-center justify-center gap-2 cursor-pointer text-sm"
+            className="w-full bg-[#0b171e] hover:bg-[#0b171e]/90 text-white font-bold py-3.5 px-6 rounded-2xl transition shadow-md flex items-center justify-center gap-2 cursor-pointer text-sm"
           >
             <FaPlusCircle className="w-4 h-4 text-[#e4a576]" />
             <span>+ Register Your First PG Property</span>
@@ -153,23 +153,23 @@ function OwnerDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f7f4ef] text-[#152935] py-8 px-4 sm:px-6 lg:px-8 pb-24 md:pb-8 transition-all duration-300">
+    <div className="min-h-screen bg-[#f7f4ef] text-[#0b171e] py-8 px-4 sm:px-6 lg:px-8 pb-24 md:pb-8 transition-all duration-300">
       <div className="max-w-7xl mx-auto space-y-6">
         
         {/* PG Top Header Card */}
         <div className="bg-white rounded-3xl p-6 shadow-sunburn border border-[#ccd5d2] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <div className="flex items-center gap-2 mb-1.5">
-              <span className="text-[11px] font-extrabold uppercase px-3 py-1 rounded-full bg-[#f1e5d6] text-[#152935] tracking-wider">
+              <span className="text-[11px] font-extrabold uppercase px-3 py-1 rounded-full bg-[#f1e5d6] text-[#0b171e] tracking-wider">
                 {activeProperty.type || "Co-Living PG"}
               </span>
               <span className="text-xs text-[#698ea2] font-bold">📍 {activeProperty.city}, {activeProperty.locality}</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-[#152935] tracking-tight flex items-center gap-3">
+            <h1 className="text-2xl sm:text-3xl font-black text-[#0b171e] tracking-tight flex items-center gap-3">
               {activeProperty.name}
             </h1>
             <p className="text-xs text-[#698ea2] mt-1 font-semibold">
-              Owner Contact: {activeProperty.ownerName} {activeProperty.phone && (<a href={`tel:${activeProperty.phone}`} className="hover:underline hover:text-[#152935] transition">({activeProperty.phone})</a>)}
+              Owner Contact: {activeProperty.ownerName} {activeProperty.phone && (<a href={`tel:${activeProperty.phone}`} className="hover:underline hover:text-[#0b171e] transition">({activeProperty.phone})</a>)}
             </p>
           </div>
 
@@ -180,7 +180,7 @@ function OwnerDashboard() {
               <select
                 value={selectedPropertyId}
                 onChange={(e) => setSelectedPropertyId(parseInt(e.target.value))}
-                className="bg-transparent text-xs font-bold text-[#152935] focus:outline-none cursor-pointer"
+                className="bg-transparent text-xs font-bold text-[#0b171e] focus:outline-none cursor-pointer"
               >
                 {properties.map((p) => (
                   <option key={p.id} value={p.id}>
@@ -192,7 +192,7 @@ function OwnerDashboard() {
 
             <button
               onClick={() => setShowAddRoomModal(true)}
-              className="bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#152935] text-xs font-extrabold px-4 py-2.5 rounded-xl transition flex items-center gap-2 cursor-pointer"
+              className="bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#0b171e] text-xs font-extrabold px-4 py-2.5 rounded-xl transition flex items-center gap-2 cursor-pointer"
             >
               <FaBed className="w-3.5 h-3.5 text-[#698ea2]" />
               <span>+ Add Room</span>
@@ -200,7 +200,7 @@ function OwnerDashboard() {
 
             <button
               onClick={() => setShowAllocateBedModal(true)}
-              className="bg-[#152935] hover:bg-[#152935]/90 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition shadow-md flex items-center gap-2 cursor-pointer"
+              className="bg-[#0b171e] hover:bg-[#0b171e]/90 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition shadow-md flex items-center gap-2 cursor-pointer"
             >
               <FaUserPlus className="w-3.5 h-3.5 text-[#e4a576]" />
               <span>Add Tenant</span>
@@ -224,7 +224,7 @@ function OwnerDashboard() {
                 <FaExclamationTriangle />
               </div>
               <div>
-                <span className="text-xs font-black text-[#152935] block">
+                <span className="text-xs font-black text-[#0b171e] block">
                   ⚠️ ₹{(pendingRentSum / 1000).toFixed(1)}K pending • {pendingInvoices.length} dues outstanding
                 </span>
                 <span className="text-[11px] text-[#698ea2] font-semibold">
@@ -237,7 +237,7 @@ function OwnerDashboard() {
                 setActiveTab("billing");
                 setShowRecordPaymentModal(true);
               }}
-              className="bg-[#152935] text-[#e4a576] hover:bg-[#152935]/90 font-extrabold text-xs px-4 py-2 rounded-xl transition flex items-center gap-1 cursor-pointer"
+              className="bg-[#0b171e] text-[#e4a576] hover:bg-[#0b171e]/90 font-extrabold text-xs px-4 py-2 rounded-xl transition flex items-center gap-1 cursor-pointer"
             >
               <span>View & Collect Dues</span>
               <FaChevronRight className="w-3 h-3" />
@@ -252,7 +252,7 @@ function OwnerDashboard() {
             {/* Top Stat Pills */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               <div className="bg-white p-5 rounded-2xl border border-[#ccd5d2] shadow-card text-center space-y-1 hover-lift">
-                <span className="text-3xl font-black text-[#152935]">{totalBeds}</span>
+                <span className="text-3xl font-black text-[#0b171e]">{totalBeds}</span>
                 <span className="text-xs font-extrabold text-[#698ea2] block uppercase tracking-wider">Total Beds</span>
               </div>
               <div className="bg-white p-5 rounded-2xl border border-[#ccd5d2] shadow-card text-center space-y-1 hover-lift">
@@ -264,7 +264,7 @@ function OwnerDashboard() {
                 <span className="text-xs font-extrabold text-[#e4a576] block uppercase tracking-wider">Vacant Beds</span>
               </div>
               <div className="bg-white p-5 rounded-2xl border border-[#ccd5d2] shadow-card text-center space-y-1 hover-lift">
-                <span className="text-3xl font-black text-[#152935]">{occupancyPercentage}%</span>
+                <span className="text-3xl font-black text-[#0b171e]">{occupancyPercentage}%</span>
                 <span className="text-xs font-extrabold text-emerald-600 block uppercase tracking-wider">Occupancy Rate</span>
               </div>
             </div>
@@ -274,7 +274,7 @@ function OwnerDashboard() {
               
               {/* Occupancy Rate Visual Graph */}
               <div className="bg-white rounded-3xl p-6 shadow-sunburn border border-[#ccd5d2] space-y-4">
-                <h3 className="text-base font-extrabold text-[#152935] flex items-center justify-between">
+                <h3 className="text-base font-extrabold text-[#0b171e] flex items-center justify-between">
                   <span>Occupancy Breakdown Graph</span>
                   <span className="text-xs font-bold text-[#698ea2]">{occupiedBeds} Occupied / {vacantBeds} Vacant</span>
                 </h3>
@@ -311,7 +311,7 @@ function OwnerDashboard() {
                       />
                     </svg>
                     <div className="absolute text-center">
-                      <span className="text-2xl font-black text-[#152935]">{occupancyPercentage}%</span>
+                      <span className="text-2xl font-black text-[#0b171e]">{occupancyPercentage}%</span>
                       <span className="text-[10px] font-bold text-[#698ea2] block">Occupied</span>
                     </div>
                   </div>
@@ -336,7 +336,7 @@ function OwnerDashboard() {
 
               {/* Total Monthly Revenue & Financial Summary */}
               <div className="bg-white rounded-3xl p-6 shadow-sunburn border border-[#ccd5d2] space-y-4">
-                <h3 className="text-base font-extrabold text-[#152935] flex items-center justify-between">
+                <h3 className="text-base font-extrabold text-[#0b171e] flex items-center justify-between">
                   <span>Total Monthly Revenue & P&L</span>
                   <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded-full">August 2026</span>
                 </h3>
@@ -349,18 +349,18 @@ function OwnerDashboard() {
 
                   <div className="bg-[#f7f4ef] p-4 rounded-2xl border border-[#ccd5d2]">
                     <span className="text-[#698ea2] block mb-1">Operating Expenses</span>
-                    <span className="text-xl font-black text-[#152935]">₹{totalOperatingExpenses.toLocaleString()}</span>
+                    <span className="text-xl font-black text-[#0b171e]">₹{totalOperatingExpenses.toLocaleString()}</span>
                   </div>
                 </div>
 
                 <div className="bg-[#f1e5d6] p-4 rounded-2xl border border-[#e4a576]/50 flex justify-between items-center text-xs">
                   <div>
                     <span className="text-[#698ea2] font-bold block">Estimated Net Profit</span>
-                    <span className="text-2xl font-black text-[#152935]">₹{estimatedOperatingProfit.toLocaleString()}</span>
+                    <span className="text-2xl font-black text-[#0b171e]">₹{estimatedOperatingProfit.toLocaleString()}</span>
                   </div>
                   <button
                     onClick={() => setShowGenerateBillModal(true)}
-                    className="bg-[#152935] text-white hover:bg-[#152935]/90 font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 cursor-pointer"
+                    className="bg-[#0b171e] text-white hover:bg-[#0b171e]/90 font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 cursor-pointer"
                   >
                     <FaFileInvoiceDollar className="text-[#e4a576]" /> Generate Bill
                   </button>
@@ -371,18 +371,18 @@ function OwnerDashboard() {
 
             {/* Quick Actions Bar */}
             <div className="bg-white rounded-3xl p-6 shadow-sunburn border border-[#ccd5d2] flex flex-wrap items-center justify-between gap-4">
-              <span className="text-xs font-extrabold text-[#152935] uppercase tracking-wider">Owner Actions & Configuration</span>
+              <span className="text-xs font-extrabold text-[#0b171e] uppercase tracking-wider">Owner Actions & Configuration</span>
               <div className="flex flex-wrap gap-3">
                 <button
                   onClick={() => setShowAddRoomModal(true)}
-                  className="bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#152935] font-bold text-xs px-4 py-2.5 rounded-xl transition flex items-center gap-2 cursor-pointer"
+                  className="bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#0b171e] font-bold text-xs px-4 py-2.5 rounded-xl transition flex items-center gap-2 cursor-pointer"
                 >
                   <FaBed className="text-[#698ea2]" /> Customize Rooms & Beds
                 </button>
 
                 <button
                   onClick={() => setShowAllocateBedModal(true)}
-                  className="bg-[#152935] hover:bg-[#152935]/90 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition shadow-md flex items-center gap-2 cursor-pointer"
+                  className="bg-[#0b171e] hover:bg-[#0b171e]/90 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition shadow-md flex items-center gap-2 cursor-pointer"
                 >
                   <FaUserPlus className="text-[#e4a576]" /> Add Tenant
                 </button>
@@ -414,7 +414,7 @@ function OwnerDashboard() {
             <div className="bg-white rounded-3xl p-6 shadow-sunburn border border-[#ccd5d2] space-y-4">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
-                  <h3 className="text-lg font-black text-[#152935]">Floor-Wise Room & Bed Customizer</h3>
+                  <h3 className="text-lg font-black text-[#0b171e]">Floor-Wise Room & Bed Customizer</h3>
                   <p className="text-xs text-[#698ea2] font-semibold mt-0.5">
                     Customize how many rooms exist per floor, set bed slots, sharing type & AC options
                   </p>
@@ -423,7 +423,7 @@ function OwnerDashboard() {
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => setShowAddRoomModal(true)}
-                    className="bg-[#152935] text-white hover:bg-[#152935]/90 text-xs font-bold px-4 py-2.5 rounded-xl transition shadow-md flex items-center gap-2 cursor-pointer"
+                    className="bg-[#0b171e] text-white hover:bg-[#0b171e]/90 text-xs font-bold px-4 py-2.5 rounded-xl transition shadow-md flex items-center gap-2 cursor-pointer"
                   >
                     <FaBed className="text-[#e4a576]" /> + Add / Configure Room & Beds
                   </button>
@@ -453,8 +453,8 @@ function OwnerDashboard() {
                       onClick={() => setSelectedFloor(fl)}
                       className={`px-3.5 py-1.5 rounded-xl text-xs font-extrabold transition cursor-pointer ${
                         selectedFloor === fl
-                          ? "bg-[#152935] text-white shadow-md"
-                          : "bg-[#f7f4ef] text-[#698ea2] hover:bg-[#f1e5d6] hover:text-[#152935]"
+                          ? "bg-[#0b171e] text-white shadow-md"
+                          : "bg-[#f7f4ef] text-[#698ea2] hover:bg-[#f1e5d6] hover:text-[#0b171e]"
                       }`}
                     >
                       {fl} {fl !== "All" ? `(${activeRooms.filter((r) => r.floor === fl).length})` : ""}
@@ -471,11 +471,11 @@ function OwnerDashboard() {
                   <div className="flex justify-between items-center border-b border-[#f1e5d6] pb-3">
                     <div>
                       <span className="text-[10px] text-[#698ea2] uppercase font-bold tracking-wider">{room.floor}</span>
-                      <h4 className="text-lg font-black text-[#152935]">ROOM {room.roomNo}</h4>
+                      <h4 className="text-lg font-black text-[#0b171e]">ROOM {room.roomNo}</h4>
                     </div>
                     <div className="flex items-center gap-2">
                       <div className="text-right">
-                        <span className="bg-[#f1e5d6] text-[#152935] text-xs font-extrabold px-3 py-1 rounded-full block">
+                        <span className="bg-[#f1e5d6] text-[#0b171e] text-xs font-extrabold px-3 py-1 rounded-full block">
                           ₹{room.rent}/mo
                         </span>
                         <span className="text-[10px] text-[#698ea2] font-semibold block mt-0.5">{room.acType || "NON-AC"}</span>
@@ -551,7 +551,7 @@ function OwnerDashboard() {
 
                   <div className="pt-2 border-t border-[#f1e5d6] flex justify-between items-center text-xs font-semibold text-[#698ea2]">
                     <span>Sharing: {room.sharingType}</span>
-                    <span className="font-bold text-[#152935]">{room.beds.filter((b) => b.status === "OCCUPIED").length} / {room.beds.length} Occupied</span>
+                    <span className="font-bold text-[#0b171e]">{room.beds.filter((b) => b.status === "OCCUPIED").length} / {room.beds.length} Occupied</span>
                   </div>
                 </div>
               ))}
@@ -565,7 +565,7 @@ function OwnerDashboard() {
           <div className="bg-white rounded-3xl p-6 shadow-sunburn border border-[#ccd5d2] space-y-6 animate-fade-in">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
-                <h3 className="text-lg font-black text-[#152935]">Tenant Profiles & Digital KYC Ledger</h3>
+                <h3 className="text-lg font-black text-[#0b171e]">Tenant Profiles & Digital KYC Ledger</h3>
                 <p className="text-xs text-[#698ea2] font-semibold mt-0.5">
                   Guest contact details, bed allocation, due dates, payment history & Aadhaar/PAN proofs
                 </p>
@@ -578,7 +578,7 @@ function OwnerDashboard() {
                   placeholder="Search tenant, Aadhaar or room..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-full pl-10 pr-4 py-2 text-xs text-[#152935] focus:outline-none focus:border-[#698ea2]"
+                  className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-full pl-10 pr-4 py-2 text-xs text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
                 />
               </div>
             </div>
@@ -599,19 +599,19 @@ function OwnerDashboard() {
                   {filteredStudents.map((s) => (
                     <tr key={s.id} className="hover:bg-[#f7f4ef]/80 transition font-semibold">
                       <td className="py-3.5 px-3">
-                        <div className="font-bold text-[#152935] text-sm">{s.name}</div>
-                        <a href={`tel:${s.phone}`} className="text-[#698ea2] text-[11px] flex items-center gap-1 mt-0.5 hover:text-[#152935] hover:underline transition">
+                        <div className="font-bold text-[#0b171e] text-sm">{s.name}</div>
+                        <a href={`tel:${s.phone}`} className="text-[#698ea2] text-[11px] flex items-center gap-1 mt-0.5 hover:text-[#0b171e] hover:underline transition">
                           <FaPhoneAlt className="w-2.5 h-2.5 text-[#698ea2]" /> {s.phone}
                         </a>
                       </td>
                       <td className="py-3.5 px-3">
-                        <span className="bg-[#f1e5d6] text-[#152935] font-extrabold px-3 py-1 rounded-lg">
+                        <span className="bg-[#f1e5d6] text-[#0b171e] font-extrabold px-3 py-1 rounded-lg">
                           Room {s.roomNo} ({s.bedNo})
                         </span>
                       </td>
                       <td className="py-3.5 px-3">
                         <div className="text-[11px]">
-                          <span className="font-mono font-bold text-[#152935] block">Aadhaar: {s.kyc?.aadhaarNo || "4812 9012 3456"}</span>
+                          <span className="font-mono font-bold text-[#0b171e] block">Aadhaar: {s.kyc?.aadhaarNo || "4812 9012 3456"}</span>
                           <span className="text-emerald-700 font-bold block text-[10px]">✓ KYC Verified</span>
                         </div>
                       </td>
@@ -624,7 +624,7 @@ function OwnerDashboard() {
                       <td className="py-3.5 px-3 text-right space-x-2">
                         <button
                           onClick={() => setSelectedStudentKYC(s)}
-                          className="bg-[#152935] text-white hover:bg-[#152935]/90 font-bold px-3 py-1.5 rounded-xl text-[11px] transition inline-flex items-center gap-1 cursor-pointer"
+                          className="bg-[#0b171e] text-white hover:bg-[#0b171e]/90 font-bold px-3 py-1.5 rounded-xl text-[11px] transition inline-flex items-center gap-1 cursor-pointer"
                         >
                           <FaIdCard className="text-[#e4a576]" /> KYC Ledger
                         </button>
@@ -650,7 +650,7 @@ function OwnerDashboard() {
             
             <div className="bg-white rounded-3xl p-6 shadow-sunburn border border-[#ccd5d2] flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
               <div>
-                <h3 className="text-lg font-black text-[#152935]">Billing & Operating Expense Tracker</h3>
+                <h3 className="text-lg font-black text-[#0b171e]">Billing & Operating Expense Tracker</h3>
                 <p className="text-xs text-[#698ea2] font-semibold mt-0.5">
                   Automated invoice generator for rent and utility/electricity bills with profit/loss summary charts
                 </p>
@@ -659,13 +659,13 @@ function OwnerDashboard() {
               <div className="flex gap-2">
                 <button
                   onClick={() => setShowGenerateBillModal(true)}
-                  className="bg-[#152935] hover:bg-[#152935]/90 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition shadow-md flex items-center gap-2 cursor-pointer"
+                  className="bg-[#0b171e] hover:bg-[#0b171e]/90 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition shadow-md flex items-center gap-2 cursor-pointer"
                 >
                   <FaFileInvoiceDollar className="text-[#e4a576]" /> Auto Bill Generator
                 </button>
                 <button
                   onClick={() => setShowAddExpenseModal(true)}
-                  className="bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#152935] font-bold text-xs px-4 py-2.5 rounded-xl transition flex items-center gap-2 cursor-pointer"
+                  className="bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#0b171e] font-bold text-xs px-4 py-2.5 rounded-xl transition flex items-center gap-2 cursor-pointer"
                 >
                   <FaCoins className="text-[#698ea2]" /> + Log Expense
                 </button>
@@ -674,7 +674,7 @@ function OwnerDashboard() {
 
             {/* Invoices List View */}
             <div className="bg-white rounded-3xl p-6 shadow-sunburn border border-[#ccd5d2] space-y-4">
-              <h4 className="text-sm font-extrabold text-[#152935] uppercase tracking-wider">Issued Rent & Utility Invoices</h4>
+              <h4 className="text-sm font-extrabold text-[#0b171e] uppercase tracking-wider">Issued Rent & Utility Invoices</h4>
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs">
                   <thead>
@@ -691,7 +691,7 @@ function OwnerDashboard() {
                     {activeInvoices.map((inv) => (
                       <tr key={inv.id} className="hover:bg-[#f7f4ef]/60 transition">
                         <td className="py-3.5 px-3">
-                          <div className="font-bold text-[#152935]">{inv.studentName}</div>
+                          <div className="font-bold text-[#0b171e]">{inv.studentName}</div>
                           <div className="text-[#698ea2] text-[10px]">{inv.id}</div>
                         </td>
                         <td className="py-3.5 px-3 text-[#698ea2]">{inv.month}</td>
@@ -699,7 +699,7 @@ function OwnerDashboard() {
                           <span>Rent: ₹{inv.rentAmount || inv.amount}</span>
                           {inv.electricityAmount > 0 && <span className="text-[#698ea2] block text-[10px]">Elec: ₹{inv.electricityAmount} • Water: ₹{inv.waterAmount}</span>}
                         </td>
-                        <td className="py-3.5 px-3 font-extrabold text-[#152935] text-sm">₹{inv.amount?.toLocaleString()}</td>
+                        <td className="py-3.5 px-3 font-extrabold text-[#0b171e] text-sm">₹{inv.amount?.toLocaleString()}</td>
                         <td className="py-3.5 px-3">
                           <span
                             className={`font-bold px-2.5 py-1 rounded-full text-[10px] uppercase ${
@@ -716,14 +716,14 @@ function OwnerDashboard() {
                                 setSelectedReceipt(inv);
                                 setShowRecordPaymentModal(true);
                               }}
-                              className="bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#152935] font-bold px-3 py-1.5 rounded-xl text-[11px] inline-flex items-center gap-1 cursor-pointer"
+                              className="bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#0b171e] font-bold px-3 py-1.5 rounded-xl text-[11px] inline-flex items-center gap-1 cursor-pointer"
                             >
                               <FaPrint className="text-[#698ea2]" /> Receipt
                             </button>
                           ) : (
                             <button
                               onClick={() => setShowRecordPaymentModal(true)}
-                              className="bg-[#152935] text-white hover:bg-[#152935]/90 font-bold px-3.5 py-1.5 rounded-xl text-[11px] cursor-pointer"
+                              className="bg-[#0b171e] text-white hover:bg-[#0b171e]/90 font-bold px-3.5 py-1.5 rounded-xl text-[11px] cursor-pointer"
                             >
                               Record Settlement
                             </button>
@@ -738,15 +738,15 @@ function OwnerDashboard() {
 
             {/* Operating Expenses Log */}
             <div className="bg-white rounded-3xl p-6 shadow-sunburn border border-[#ccd5d2] space-y-4">
-              <h4 className="text-sm font-extrabold text-[#152935] uppercase tracking-wider">Operating Expenses Log</h4>
+              <h4 className="text-sm font-extrabold text-[#0b171e] uppercase tracking-wider">Operating Expenses Log</h4>
               <div className="space-y-3">
                 {activeExpenses.map((exp) => (
                   <div key={exp.id} className="bg-[#f7f4ef] p-4 rounded-2xl border border-[#ccd5d2] flex justify-between items-center text-xs">
                     <div>
-                      <span className="font-bold text-[#152935] text-sm block">{exp.category}</span>
+                      <span className="font-bold text-[#0b171e] text-sm block">{exp.category}</span>
                       <span className="text-[11px] text-[#698ea2]">{exp.notes} • {exp.date}</span>
                     </div>
-                    <span className="font-black text-[#152935] text-base">₹{exp.amount?.toLocaleString()}</span>
+                    <span className="font-black text-[#0b171e] text-base">₹{exp.amount?.toLocaleString()}</span>
                   </div>
                 ))}
               </div>
@@ -760,7 +760,7 @@ function OwnerDashboard() {
           <div className="bg-white rounded-3xl p-6 shadow-sunburn border border-[#ccd5d2] space-y-6 animate-fade-in">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-lg font-black text-[#152935]">Complaint / Issue Maintenance Desk</h3>
+                <h3 className="text-lg font-black text-[#0b171e]">Complaint / Issue Maintenance Desk</h3>
                 <p className="text-xs text-[#698ea2] font-semibold mt-0.5">
                   Track maintenance requests raised by tenants & assign staff members (Electrician, Plumber, Housekeeping)
                 </p>
@@ -768,7 +768,7 @@ function OwnerDashboard() {
 
               <button
                 onClick={() => setShowAddComplaintModal(true)}
-                className="bg-[#152935] hover:bg-[#152935]/90 text-white text-xs font-bold px-4 py-2.5 rounded-xl flex items-center gap-2 cursor-pointer"
+                className="bg-[#0b171e] hover:bg-[#0b171e]/90 text-white text-xs font-bold px-4 py-2.5 rounded-xl flex items-center gap-2 cursor-pointer"
               >
                 <FaTools className="text-[#e4a576]" /> Log Maintenance Request
               </button>
@@ -779,10 +779,10 @@ function OwnerDashboard() {
                 <div key={c.id} className="bg-[#f7f4ef] p-5 rounded-2xl border border-[#ccd5d2] flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs font-semibold">
                   <div>
                     <div className="flex items-center gap-2 mb-1.5">
-                      <span className="bg-[#f1e5d6] text-[#152935] text-[10px] font-extrabold px-2.5 py-0.5 rounded-md uppercase">
+                      <span className="bg-[#f1e5d6] text-[#0b171e] text-[10px] font-extrabold px-2.5 py-0.5 rounded-md uppercase">
                         {c.category}
                       </span>
-                      <span className="font-bold text-[#152935]">Room {c.roomNo} ({c.studentName})</span>
+                      <span className="font-bold text-[#0b171e]">Room {c.roomNo} ({c.studentName})</span>
                       <span
                         className={`text-[10px] font-bold px-2 py-0.5 rounded-md uppercase ${
                           c.priority === "HIGH" ? "bg-rose-100 text-rose-800" : "bg-amber-100 text-amber-800"
@@ -801,7 +801,7 @@ function OwnerDashboard() {
                       <select
                         value={c.assignedStaff || "Unassigned"}
                         onChange={(e) => assignComplaintStaff(c.id, e.target.value)}
-                        className="bg-white border border-[#ccd5d2] text-[#152935] text-xs font-bold px-3 py-1.5 rounded-xl focus:outline-none cursor-pointer"
+                        className="bg-white border border-[#ccd5d2] text-[#0b171e] text-xs font-bold px-3 py-1.5 rounded-xl focus:outline-none cursor-pointer"
                       >
                         {staffList.map((st, idx) => (
                           <option key={idx} value={st}>
@@ -818,7 +818,7 @@ function OwnerDashboard() {
                     ) : (
                       <button
                         onClick={() => updateComplaintStatus(c.id, "RESOLVED")}
-                        className="bg-[#152935] text-white hover:bg-[#152935]/90 font-bold px-3.5 py-1.5 rounded-xl text-[11px] cursor-pointer"
+                        className="bg-[#0b171e] text-white hover:bg-[#0b171e]/90 font-bold px-3.5 py-1.5 rounded-xl text-[11px] cursor-pointer"
                       >
                         Mark Resolved
                       </button>
@@ -835,8 +835,8 @@ function OwnerDashboard() {
 
       {/* Bed Transfer Modal */}
       {transferModalStudent && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#152935]/75 backdrop-blur-sm">
-          <div className="bg-white p-6 rounded-3xl max-w-sm w-full space-y-4 text-xs font-semibold text-[#152935] border border-[#ccd5d2] shadow-sunburn">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0b171e]/75 backdrop-blur-sm">
+          <div className="bg-white p-6 rounded-3xl max-w-sm w-full space-y-4 text-xs font-semibold text-[#0b171e] border border-[#ccd5d2] shadow-sunburn">
             <h4 className="text-base font-bold">Transfer Bed for {transferModalStudent.name}</h4>
             <div>
               <label className="block text-[#698ea2] mb-1">Target Room Number</label>
@@ -844,7 +844,7 @@ function OwnerDashboard() {
                 type="text"
                 value={targetRoomNo}
                 onChange={(e) => setTargetRoomNo(e.target.value)}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-2 text-xs text-[#152935]"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-2 text-xs text-[#0b171e]"
               />
             </div>
             <div>
@@ -852,7 +852,7 @@ function OwnerDashboard() {
               <select
                 value={targetBedNo}
                 onChange={(e) => setTargetBedNo(e.target.value)}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-2 text-xs text-[#152935]"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-2 text-xs text-[#0b171e]"
               >
                 <option value="Bed 1">Bed 1</option>
                 <option value="Bed 2">Bed 2</option>
@@ -863,11 +863,11 @@ function OwnerDashboard() {
             <div className="flex gap-2 pt-2">
               <button
                 onClick={() => setTransferModalStudent(null)}
-                className="w-full bg-[#f1e5d6] py-2 rounded-xl font-bold text-[#152935]"
+                className="w-full bg-[#f1e5d6] py-2 rounded-xl font-bold text-[#0b171e]"
               >
                 Cancel
               </button>
-              <button onClick={handleTransfer} className="w-full bg-[#152935] text-white py-2 rounded-xl font-bold">
+              <button onClick={handleTransfer} className="w-full bg-[#0b171e] text-white py-2 rounded-xl font-bold">
                 Confirm Transfer
               </button>
             </div>

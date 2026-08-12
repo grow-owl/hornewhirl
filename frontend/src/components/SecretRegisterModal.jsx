@@ -46,24 +46,24 @@ function SecretRegisterModal({ show, onClose, onSuccess }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#152935]/80 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-md bg-white rounded-3xl shadow-2xl p-6 sm:p-8 text-[#152935] border border-[#ccd5d2] animate-pop-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0b171e]/80 backdrop-blur-md overflow-y-auto">
+      <div className="relative w-full max-w-md bg-white rounded-3xl shadow-2xl p-6 sm:p-8 text-[#0b171e] border border-[#ccd5d2] animate-pop-in">
 
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#152935] p-2 rounded-full transition cursor-pointer"
+          className="absolute top-5 right-5 bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#0b171e] p-2 rounded-full transition cursor-pointer"
         >
           <FaTimes className="w-4 h-4" />
         </button>
 
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-11 h-11 rounded-2xl bg-[#152935] text-[#e4a576] flex items-center justify-center font-bold shadow-md">
+          <div className="w-11 h-11 rounded-2xl bg-[#0b171e] text-[#e4a576] flex items-center justify-center font-bold shadow-md">
             <FaUserTie className="w-6 h-6 text-[#e4a576]" />
           </div>
           <div>
-            <h3 className="text-xl font-black text-[#152935] tracking-tight">Owner Registration</h3>
+            <h3 className="text-xl font-black text-[#0b171e] tracking-tight">Owner Registration</h3>
             <p className="text-xs text-[#698ea2] font-semibold">Create your PG Owner Account</p>
           </div>
         </div>
@@ -83,7 +83,7 @@ function SecretRegisterModal({ show, onClose, onSuccess }) {
               required
               value={enteredKey}
               onChange={(e) => setEnteredKey(e.target.value)}
-              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-2.5 font-mono text-xs text-[#152935] focus:outline-none focus:border-[#698ea2]"
+              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-2.5 font-mono text-xs text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
               placeholder="Enter Secret Key"
             />
           </div>
@@ -97,7 +97,7 @@ function SecretRegisterModal({ show, onClose, onSuccess }) {
               placeholder="e.g. Ramesh V"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-2.5 text-xs text-[#152935] focus:outline-none focus:border-[#698ea2]"
+              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-2.5 text-xs text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
             />
           </div>
 
@@ -110,7 +110,7 @@ function SecretRegisterModal({ show, onClose, onSuccess }) {
               placeholder="+91 98480 12345"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-2.5 text-xs text-[#152935] focus:outline-none focus:border-[#698ea2]"
+              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-2.5 text-xs text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
             />
           </div>
 
@@ -123,7 +123,7 @@ function SecretRegisterModal({ show, onClose, onSuccess }) {
               placeholder="owner@homewhirl.in"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-2.5 text-xs text-[#152935] focus:outline-none focus:border-[#698ea2]"
+              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-2.5 text-xs text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
             />
           </div>
 
@@ -137,7 +137,7 @@ function SecretRegisterModal({ show, onClose, onSuccess }) {
                 placeholder="••••••••"
                 value={formData.password}
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-2.5 text-xs text-[#152935] focus:outline-none focus:border-[#698ea2]"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-2.5 text-xs text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
               />
             </div>
 
@@ -149,7 +149,7 @@ function SecretRegisterModal({ show, onClose, onSuccess }) {
                 placeholder="••••••••"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-2.5 text-xs text-[#152935] focus:outline-none focus:border-[#698ea2]"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-2.5 text-xs text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
               />
             </div>
           </div>
@@ -163,7 +163,7 @@ function SecretRegisterModal({ show, onClose, onSuccess }) {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#152935] hover:bg-[#152935]/90 text-white font-bold py-3.5 px-6 rounded-2xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer text-xs sm:text-sm"
+              className="w-full bg-[#0b171e] hover:bg-[#0b171e]/90 text-white font-bold py-3.5 px-6 rounded-2xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer text-xs sm:text-sm"
             >
               <FaCheckCircle className="w-4 h-4 text-[#e4a576]" />
               <span>{loading ? "Registering Account..." : "Register Owner Account"}</span>

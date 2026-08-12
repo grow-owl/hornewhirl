@@ -32,23 +32,23 @@ function AllocateBedModal() {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#152935]/75 backdrop-blur-sm overflow-y-auto">
-      <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-sunburn p-6 sm:p-8 text-[#152935] border border-[#ccd5d2] animate-pop-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0b171e]/75 backdrop-blur-sm overflow-y-auto">
+      <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-sunburn p-6 sm:p-8 text-[#0b171e] border border-[#ccd5d2] animate-pop-in">
         
         {/* Close Button */}
         <button
           onClick={() => setShowAllocateBedModal(false)}
-          className="absolute top-5 right-5 bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#152935] p-2 rounded-full transition cursor-pointer"
+          className="absolute top-5 right-5 bg-[#f1e5d6] hover:bg-[#ccd5d2] text-[#0b171e] p-2 rounded-full transition cursor-pointer"
         >
           <FaTimes className="w-4 h-4" />
         </button>
 
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-10 h-10 rounded-2xl bg-[#152935] text-[#e4a576] flex items-center justify-center font-bold shadow-sm">
+          <div className="w-10 h-10 rounded-2xl bg-[#0b171e] text-[#e4a576] flex items-center justify-center font-bold shadow-sm">
             <FaBed className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-[#152935]">Onboard Tenant & Allocate Bed</h3>
+            <h3 className="text-xl font-bold text-[#0b171e]">Onboard Tenant & Allocate Bed</h3>
             <p className="text-xs text-[#698ea2]">{activeProperty.name} ({activeProperty.locality})</p>
           </div>
         </div>
@@ -62,7 +62,7 @@ function AllocateBedModal() {
               placeholder="e.g. Peddi Ravindra"
               value={formData.studentName}
               onChange={(e) => setFormData({ ...formData, studentName: e.target.value })}
-              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2]"
+              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
             />
           </div>
 
@@ -75,7 +75,7 @@ function AllocateBedModal() {
                 placeholder="+91 98480 12345"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2]"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
               />
             </div>
 
@@ -86,14 +86,14 @@ function AllocateBedModal() {
                 placeholder="tenant@gmail.com"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2]"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
               />
             </div>
           </div>
 
           {/* KYC Information */}
           <div className="bg-[#f1e5d6]/50 p-3.5 rounded-2xl border border-[#ccd5d2] space-y-3">
-            <span className="text-[11px] font-extrabold uppercase text-[#152935] tracking-wider flex items-center gap-1.5">
+            <span className="text-[11px] font-extrabold uppercase text-[#0b171e] tracking-wider flex items-center gap-1.5">
               <FaIdCard className="text-[#e4a576]" /> Digital KYC & Proof Details
             </span>
 
@@ -105,7 +105,7 @@ function AllocateBedModal() {
                   placeholder="4812 9012 3456"
                   value={formData.aadhaarNo}
                   onChange={(e) => setFormData({ ...formData, aadhaarNo: e.target.value })}
-                  className="w-full bg-white border border-[#ccd5d2] rounded-xl px-3 py-2 text-xs text-[#152935]"
+                  className="w-full bg-white border border-[#ccd5d2] rounded-xl px-3 py-2 text-xs text-[#0b171e]"
                 />
               </div>
               <div>
@@ -115,7 +115,7 @@ function AllocateBedModal() {
                   placeholder="ABCDE1234F"
                   value={formData.panNo}
                   onChange={(e) => setFormData({ ...formData, panNo: e.target.value })}
-                  className="w-full bg-white border border-[#ccd5d2] rounded-xl px-3 py-2 text-xs text-[#152935]"
+                  className="w-full bg-white border border-[#ccd5d2] rounded-xl px-3 py-2 text-xs text-[#0b171e]"
                 />
               </div>
             </div>
@@ -127,7 +127,7 @@ function AllocateBedModal() {
               <select
                 value={formData.roomNo}
                 onChange={(e) => setFormData({ ...formData, roomNo: e.target.value })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2] cursor-pointer"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2] cursor-pointer"
               >
                 {activeRooms.map((r) => (
                   <option key={r.id} value={r.roomNo}>
@@ -142,7 +142,7 @@ function AllocateBedModal() {
               <select
                 value={formData.bedNo}
                 onChange={(e) => setFormData({ ...formData, bedNo: e.target.value })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2] cursor-pointer"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2] cursor-pointer"
               >
                 <option value="Bed 1">Bed 1</option>
                 <option value="Bed 2">Bed 2</option>
@@ -158,7 +158,7 @@ function AllocateBedModal() {
                 required
                 value={formData.rent}
                 onChange={(e) => setFormData({ ...formData, rent: parseInt(e.target.value) || 0 })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2]"
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
               />
             </div>
           </div>
@@ -170,14 +170,14 @@ function AllocateBedModal() {
               required
               value={formData.joiningDate}
               onChange={(e) => setFormData({ ...formData, joiningDate: e.target.value })}
-              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#152935] focus:outline-none focus:border-[#698ea2]"
+              className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-4 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2]"
             />
           </div>
 
           <div className="pt-2">
             <button
               type="submit"
-              className="w-full bg-[#152935] hover:bg-[#152935]/90 text-white font-bold py-3.5 px-6 rounded-2xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer text-sm"
+              className="w-full bg-[#0b171e] hover:bg-[#0b171e]/90 text-white font-bold py-3.5 px-6 rounded-2xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer text-sm"
             >
               <FaCheck className="w-4 h-4 text-[#e4a576]" />
               <span>Confirm Bed Allocation & KYC Record</span>

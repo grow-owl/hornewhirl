@@ -52,14 +52,14 @@ function Sidebar({ onOpenSignIn }) {
       {/* Backdrop overlay for closing drawer when clicking outside */}
       <div
         onClick={() => setSidebarOpen(false)}
-        className={`fixed inset-0 bg-[#152935]/60 backdrop-blur-xs z-40 transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-[#0b171e]/60 backdrop-blur-xs z-40 transition-opacity duration-300 ${
           sidebarOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       />
 
       {/* Sliding Drawer Sidebar */}
       <aside
-        className={`flex flex-col fixed left-0 top-0 bottom-0 w-64 bg-[#152935] text-white z-50 p-5 justify-between shadow-2xl border-r border-white/10 transition-transform duration-300 ease-in-out transform ${
+        className={`flex flex-col fixed left-0 top-0 bottom-0 w-64 bg-[#0b171e] text-white z-50 p-5 justify-between shadow-2xl border-r border-white/10 transition-transform duration-300 ease-in-out transform ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -67,8 +67,8 @@ function Sidebar({ onOpenSignIn }) {
         <div className="space-y-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-[#e4a576] flex items-center justify-center text-[#152935] font-black text-xl shadow-md">
-                <FaHome className="w-5 h-5 text-[#152935]" />
+              <div className="w-10 h-10 rounded-2xl bg-[#e4a576] flex items-center justify-center text-[#0b171e] font-black text-xl shadow-md">
+                <FaHome className="w-5 h-5 text-[#0b171e]" />
               </div>
               <div>
                 <span className="text-xl font-extrabold tracking-tight text-white block leading-tight">
@@ -101,7 +101,7 @@ function Sidebar({ onOpenSignIn }) {
                   className="bg-transparent text-xs font-bold text-white focus:outline-none cursor-pointer w-full truncate"
                 >
                   {properties.map((p) => (
-                    <option key={p.id} value={p.id} className="bg-[#152935] text-white">
+                    <option key={p.id} value={p.id} className="bg-[#0b171e] text-white">
                       {p.name}
                     </option>
                   ))}
@@ -125,15 +125,15 @@ function Sidebar({ onOpenSignIn }) {
                   onClick={() => handleSelectNav(item.id)}
                   className={`w-full px-3.5 py-3 rounded-xl transition flex items-center justify-between text-xs font-bold cursor-pointer ${
                     isActive
-                      ? "bg-[#e4a576] text-[#152935] shadow-lg font-black"
+                      ? "bg-[#e4a576] text-[#0b171e] shadow-lg font-black"
                       : "text-slate-300 hover:text-white hover:bg-white/10"
                   }`}
                 >
                   <div className="flex items-center gap-3">
-                    <Icon className={`w-4 h-4 ${isActive ? "text-[#152935]" : "text-[#e4a576]"}`} />
+                    <Icon className={`w-4 h-4 ${isActive ? "text-[#0b171e]" : "text-[#e4a576]"}`} />
                     <span>{item.label}</span>
                   </div>
-                  {isActive && <FaChevronRight className="w-3 h-3 text-[#152935]" />}
+                  {isActive && <FaChevronRight className="w-3 h-3 text-[#0b171e]" />}
                 </button>
               );
             })}
@@ -159,9 +159,9 @@ function Sidebar({ onOpenSignIn }) {
                 setShowAllocateBedModal(true);
                 setSidebarOpen(false);
               }}
-              className="bg-[#e4a576] hover:bg-[#d89463] text-[#152935] text-[11px] font-black py-2.5 px-3 rounded-xl transition shadow-md flex items-center justify-center gap-1.5 cursor-pointer"
+              className="bg-[#e4a576] hover:bg-[#d89463] text-[#0b171e] text-[11px] font-black py-2.5 px-3 rounded-xl transition shadow-md flex items-center justify-center gap-1.5 cursor-pointer"
             >
-              <FaPlus className="w-3 h-3 text-[#152935]" />
+              <FaPlus className="w-3 h-3 text-[#0b171e]" />
               <span>+ Tenant</span>
             </button>
           </div>

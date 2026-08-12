@@ -19,8 +19,8 @@ const AddExpenseModal = lazy(() => import("../components/AddExpenseModal"));
 const AddComplaintModal = lazy(() => import("../components/AddComplaintModal"));
 
 const LoadingFallback = () => (
-  <div className="flex items-center justify-center p-12 space-x-3 text-[#152935]">
-    <div className="w-6 h-6 border-3 border-[#152935] border-t-[#e4a576] rounded-full animate-spin"></div>
+  <div className="flex items-center justify-center p-12 space-x-3 text-[#0b171e]">
+    <div className="w-6 h-6 border-3 border-[#0b171e] border-t-[#e4a576] rounded-full animate-spin"></div>
     <span className="text-xs font-extrabold text-[#698ea2]">Loading HomeWhirl Workspace...</span>
   </div>
 );
@@ -71,7 +71,7 @@ function MainContent({ page }) {
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f4ef] text-[#152935] flex flex-col font-sans selection:bg-[#152935] selection:text-[#e4a576]">
+    <div className="min-h-screen bg-[#f7f4ef] text-[#0b171e] flex flex-col font-sans selection:bg-[#0b171e] selection:text-[#e4a576]">
       {/* Desktop Sidebar */}
       {viewMode === "dashboard" && isAuthenticated && (
         <Sidebar onOpenSignIn={() => navigate("/login")} />

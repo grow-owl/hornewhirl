@@ -9,18 +9,18 @@ function Footer() {
           
           {/* Brand & Clean Slogan */}
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-xl bg-[#152935] flex items-center justify-center text-[#e4a576] font-black text-xs shadow-sm">
+            <div className="w-8 h-8 rounded-xl bg-[#0b171e] flex items-center justify-center text-[#e4a576] font-black text-xs shadow-sm">
               <FaHome className="w-3.5 h-3.5 text-[#e4a576]" />
             </div>
             <div>
-              <span className="text-base font-extrabold text-[#152935]">
+              <span className="text-base font-extrabold text-[#0b171e]">
                 Home<span className="text-[#698ea2]">Whirl</span>
               </span>
             </div>
           </div>
 
           {/* Minimal Contact & Copyright */}
-          <div className="flex flex-wrap items-center gap-4 text-[#152935] text-[11px] font-bold">
+          <div className="flex flex-wrap items-center gap-4 text-[#0b171e] text-[11px] font-bold">
             <a href="mailto:support@homewhirl.in" className="flex items-center gap-1.5 hover:text-[#e4a576] hover:underline transition">
               <FaEnvelope className="text-[#698ea2]" /> support@homewhirl.in
             </a>
