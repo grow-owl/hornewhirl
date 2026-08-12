@@ -33,8 +33,10 @@ export const createRoom = (req, res) => {
     floor: floor || 'Ground Floor',
     roomNo: String(roomNo),
     sharingType: sharingType || 'Double Sharing',
+    monthlyRent: parseInt(rent) || 0,
     rent: parseInt(rent) || 0,
     acType: acType || 'NON-AC',
+    hasAc: acType === 'AC',
     beds
   };
 

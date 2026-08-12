@@ -6,7 +6,12 @@ function AllocateBedModal() {
   const { showAllocateBedModal, setShowAllocateBedModal, rooms, activeProperty, allocateBed } = useApp();
 
   const activeRooms = rooms.filter((r) => r.propertyId === activeProperty.id);
-  const availableRooms = activeRooms.filter((r) => r.beds.some((b) => b.status === "AVAILABLE"));
+  const availableRooms = activeRooms.filter((r) => (r.beds || []).some((b) => b.status === "AVAILABLE"));
+
+  const defaultRoom = availableRooms[0] || activeRooms[0];
+  const defaultAvailBeds = defaultRoom ? (defaultRoom.beds || []).filter((b) => b.status === "AVAILABLE") : [];
+  const defaultBed = defaultAvailBeds[0]?.bedNo || "";
+  const defaultRent = defaultRoom?.monthlyRent || defaultRoom?.rent || activeProperty?.monthlyRentPerBed || 7500;
 
   const [formData, setFormData] = useState({
     studentName: "",
@@ -14,9 +19,9 @@ function AllocateBedModal() {
     email: "",
     gender: "Male",
     guardian: "",
-    roomNo: availableRooms[0]?.roomNo || "101",
-    bedNo: "Bed 1",
-    rent: availableRooms[0]?.rent || 7500,
+    roomNo: defaultRoom?.roomNo || "",
+    bedNo: defaultBed,
+    rent: defaultRent,
     joiningDate: new Date().toISOString().split("T")[0],
     aadhaarNo: "",
     panNo: "",
@@ -26,8 +31,29 @@ function AllocateBedModal() {
 
   if (!showAllocateBedModal) return null;
 
+  const handleRoomChange = (selectedRoomNo) => {
+    const selectedRoom = activeRooms.find((r) => String(r.roomNo) === String(selectedRoomNo));
+    const availBeds = selectedRoom ? (selectedRoom.beds || []).filter((b) => b.status === "AVAILABLE") : [];
+    const firstBed = availBeds[0]?.bedNo || "";
+    const roomRent = selectedRoom?.monthlyRent || selectedRoom?.rent || activeProperty?.monthlyRentPerBed || 7500;
+
+    setFormData((prev) => ({
+      ...prev,
+      roomNo: selectedRoomNo,
+      bedNo: firstBed,
+      rent: roomRent,
+    }));
+  };
+
+  const currentSelectedRoom = activeRooms.find((r) => String(r.roomNo) === String(formData.roomNo)) || defaultRoom;
+  const currentAvailableBeds = currentSelectedRoom ? (currentSelectedRoom.beds || []).filter((b) => b.status === "AVAILABLE") : [];
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!formData.bedNo) {
+      alert("No available bed selected for this room!");
+      return;
+    }
     allocateBed(formData);
   };
 
@@ -126,7 +152,7 @@ function AllocateBedModal() {
               <label className="block text-[#698ea2] mb-1">Select Room</label>
               <select
                 value={formData.roomNo}
-                onChange={(e) => setFormData({ ...formData, roomNo: e.target.value })}
+                onChange={(e) => handleRoomChange(e.target.value)}
                 className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2] cursor-pointer"
               >
                 {activeRooms.map((r) => (
@@ -142,12 +168,18 @@ function AllocateBedModal() {
               <select
                 value={formData.bedNo}
                 onChange={(e) => setFormData({ ...formData, bedNo: e.target.value })}
-                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2] cursor-pointer"
+                disabled={currentAvailableBeds.length === 0}
+                className="w-full bg-[#f7f4ef] border border-[#ccd5d2] rounded-xl px-3 py-3 text-sm text-[#0b171e] focus:outline-none focus:border-[#698ea2] cursor-pointer disabled:opacity-50"
               >
-                <option value="Bed 1">Bed 1</option>
-                <option value="Bed 2">Bed 2</option>
-                <option value="Bed 3">Bed 3</option>
-                <option value="Bed 4">Bed 4</option>
+                {currentAvailableBeds.length > 0 ? (
+                  currentAvailableBeds.map((b) => (
+                    <option key={b.id || b.bedNo} value={b.bedNo}>
+                      {b.bedNo}
+                    </option>
+                  ))
+                ) : (
+                  <option value="">No Bed Available</option>
+                )}
               </select>
             </div>
 

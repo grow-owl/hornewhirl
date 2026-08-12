@@ -29,12 +29,27 @@ export const allocateStudent = (req, res) => {
     idProofType
   } = req.body;
 
-  if (!propertyId || !studentName || !phone || !roomNo) {
-    return res.status(400).json({ success: false, message: 'Property, Tenant Name, Phone, and Room No are required' });
+  if (!propertyId || !studentName || !phone || !roomNo || !bedNo) {
+    return res.status(400).json({ success: false, message: 'Property, Tenant Name, Phone, Room No, and Bed Slot are required' });
   }
 
   const pId = parseInt(propertyId);
+  const targetRoom = (db.rooms || []).find((r) => r.propertyId === pId && String(r.roomNo) === String(roomNo));
+  if (!targetRoom) {
+    return res.status(400).json({ success: false, message: `Room ${roomNo} not found in this property` });
+  }
+
+  const targetBed = (targetRoom.beds || []).find((b) => b.bedNo === bedNo || b.id === bedNo);
+  if (!targetBed) {
+    return res.status(400).json({ success: false, message: `Bed ${bedNo} does not exist in Room ${roomNo}` });
+  }
+
+  if (targetBed.status === 'OCCUPIED') {
+    return res.status(400).json({ success: false, message: `Bed ${bedNo} in Room ${roomNo} is already occupied` });
+  }
+
   const studentId = Date.now();
+  const finalRent = parseInt(rent) || targetRoom.monthlyRent || targetRoom.rent || 0;
 
   const newStudent = {
     id: studentId,
@@ -45,9 +60,9 @@ export const allocateStudent = (req, res) => {
     gender: gender || 'Male',
     guardian: guardian || 'Guardian Contact Recorded',
     joiningDate: joiningDate || new Date().toISOString().split('T')[0],
-    roomNo,
-    bedNo: bedNo || 'Bed 1',
-    rent: parseInt(rent) || 0,
+    roomNo: String(roomNo),
+    bedNo: targetBed.bedNo,
+    rent: finalRent,
     status: 'ACTIVE',
     kyc: {
       aadhaarNo: aadhaarNo || '',
