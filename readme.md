@@ -4,7 +4,7 @@ HomeWhirl is a full-stack PG and Hostel management platform designed for propert
 
 ---
 
-## 🌟 Core Features
+## Core Features
 
 1. **Overview Dashboard**:
    - Total monthly revenue collection tracking
@@ -35,7 +35,7 @@ HomeWhirl is a full-stack PG and Hostel management platform designed for propert
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Frontend**: React 19, Vite, Tailwind CSS v4, React Icons, React Router DOM
 - **Backend**: Node.js, Express.js REST API, JSON File DB System
@@ -43,7 +43,7 @@ HomeWhirl is a full-stack PG and Hostel management platform designed for propert
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone & Setup Backend
 ```bash
@@ -63,6 +63,7 @@ Frontend Web App will run on `http://localhost:5173`
 
 ---
 
-## 📄 License
+## License
 
 HomeWhirl SaaS Platform © 2026. All rights reserved.
+created by GrowOwl Pvt. Ltd.
